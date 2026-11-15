@@ -68,4 +68,34 @@ main { max-width: 1100px; margin: 0 auto; padding: 16px; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .btn:hover { text-decoration: none; opacity: .85; }
 
+.section-title { font-size: 1.25rem; margin: 24px 0 12px; }
+.tiles {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.tile {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px 16px;
+}
+.tile b { display: block; font-size: 1.6rem; line-height: 1.2; }
+.tile span { color: var(--muted); font-size: .82rem; }
+.stats-cols {
+  display: grid; gap: 16px; margin-top: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.panel {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px;
+}
+.panel h3 { margin: 0 0 12px; font-size: 1rem; }
+.langbar { display: flex; height: 10px; border-radius: 999px; overflow: hidden; background: var(--border); }
+.langbar i { display: block; height: 100%; }
+.langlist { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; font-size: .88rem; }
+.langlist li { display: flex; align-items: center; gap: 8px; }
+.langlist .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.langlist .pct { margin-left: auto; color: var(--muted); }
+.activity { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: .88rem; }
+.activity li { display: flex; flex-direction: column; }
+.activity small { color: var(--muted); }
+
 footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 32px 16px; }
