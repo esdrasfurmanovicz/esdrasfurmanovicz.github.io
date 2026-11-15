@@ -1,0 +1,71 @@
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --muted: #656d76;
+    --accent: #0969da;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.hero { text-align: center; padding: 64px 16px 24px; }
+.hero h1 { margin: 0 0 8px; font-size: clamp(2rem, 6vw, 3rem); }
+.hero p { margin: 0 0 16px; color: var(--muted); }
+.hero nav { display: flex; gap: 16px; justify-content: center; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.toolbar { display: flex; gap: 12px; margin-bottom: 16px; }
+.toolbar input, .toolbar select {
+  background: var(--card); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 12px; font: inherit;
+}
+.toolbar input { flex: 1; min-width: 0; }
+.status { color: var(--muted); text-align: center; }
+
+.grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: transform .15s, border-color .15s;
+}
+.card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.card h2 { margin: 0; font-size: 1.1rem; word-break: break-word; }
+.card p { margin: 0; color: var(--muted); font-size: .92rem; flex: 1; }
+.meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: .8rem; color: var(--muted); }
+.topics { display: flex; flex-wrap: wrap; gap: 6px; }
+.topics span {
+  font-size: .72rem; padding: 2px 8px; border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent);
+}
+.actions { display: flex; gap: 8px; margin-top: 4px; }
+.btn {
+  flex: 1; text-align: center; padding: 8px; border-radius: 8px;
+  border: 1px solid var(--border); font-size: .88rem; color: var(--text);
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn:hover { text-decoration: none; opacity: .85; }
+
+footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 32px 16px; }

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esdras Furmanovicz · Projetos</title>
+  <meta name="description" content="Hub com todos os meus projetos publicados no GitHub Pages.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Esdras Furmanovicz</h1>
+    <p>Todos os meus projetos publicados, num só lugar.</p>
+    <nav>
+      <a href="https://github.com/esdrasfurmanovicz">GitHub</a>
+      <a href="https://esdrasfurmanovicz.github.io/portfolio/" id="portfolio-link">Portfólio</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Buscar projeto…" aria-label="Buscar projeto">
+      <select id="sort" aria-label="Ordenar">
+        <option value="updated">Mais recentes</option>
+        <option value="name">Nome (A–Z)</option>
+        <option value="stars">Mais estrelas</option>
+      </select>
+    </div>
+    <p id="status" class="status">Carregando projetos…</p>
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <footer>Gerado automaticamente via API do GitHub · <span id="count"></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
